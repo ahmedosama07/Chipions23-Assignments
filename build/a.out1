@@ -1,0 +1,14 @@
+**** module/scope: decoder3to8
+     Flip-Flops   : 0
+     Logic Gates  : 16
+     MUX[2]: 8 slices
+     LPM[5]: 1 unaccounted
+     LOG[13]: 1 unaccounted
+     LOG[14]: 1 unaccounted
+**** TOTALS
+     Flip-Flops   : 0
+     Logic Gates  : 16
+     MUX[2]: 8 slices
+     LPM[5]: 1 unaccounted
+     LOG[13]: 1 unaccounted
+     LOG[14]: 1 unaccounted
