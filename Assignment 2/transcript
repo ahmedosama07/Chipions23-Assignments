@@ -1,0 +1,150 @@
+vsim work.alu
+# vsim work.alu 
+# Start time: 22:06:21 on Apr 29,2023
+# Loading work.alu
+# Loading work.fulladder
+# Loading work.FA_1
+# Compile of alu.v was successful.
+# Compile of FA_1.v was successful.
+# Compile of FA_1_tb.v was successful.
+# Compile of fulladder.v was successful.
+# Compile of fulladder_tb.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim work.alu
+# End time: 22:09:53 on Apr 29,2023, Elapsed time: 0:03:32
+# Errors: 0, Warnings: 2
+# vsim work.alu 
+# Start time: 22:09:53 on Apr 29,2023
+# Loading work.alu
+# Loading work.fulladder
+# Loading work.FA_1
+add wave -position insertpoint  \
+sim:/alu/a \
+sim:/alu/b \
+sim:/alu/cflag \
+sim:/alu/cin \
+sim:/alu/cout \
+sim:/alu/opcode \
+sim:/alu/out \
+sim:/alu/zflag
+force -freeze sim:/alu/a 00000001 0
+force -freeze sim:/alu/b 00000000 0
+force -freeze sim:/alu/opcode 101 0
+run
+run
+run
+run
+force -freeze sim:/alu/opcode 000 0
+run
+run
+run
+run
+run
+force -freeze sim:/alu/a 00000000 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of alu.v was successful.
+# Compile of FA_1.v was successful.
+# Compile of FA_1_tb.v was successful.
+# Compile of fulladder.v was successful.
+# Compile of fulladder_tb.v was successful.
+# 5 compiles, 0 failed with no errors.
+run
+run
+run
+vsim work.alu
+# End time: 22:17:32 on Apr 29,2023, Elapsed time: 0:07:39
+# Errors: 0, Warnings: 2
+# vsim work.alu 
+# Start time: 22:17:32 on Apr 29,2023
+# Loading work.alu
+# Loading work.fulladder
+# Loading work.FA_1
+add wave -position insertpoint  \
+sim:/alu/a \
+sim:/alu/b \
+sim:/alu/cflag \
+sim:/alu/cin \
+sim:/alu/cout \
+sim:/alu/opcode \
+sim:/alu/out \
+sim:/alu/zflag
+force -freeze sim:/alu/a 00000001 0
+force -freeze sim:/alu/b 00000000 0
+run
+run
+run
+run
+run
+noforce sim:/alu/opcode
+force -freeze sim:/alu/opcode 101 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 22:18:40 on Apr 29,2023, Elapsed time: 0:01:08
+# Errors: 0, Warnings: 1

@@ -1,0 +1,127 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Engineering/College/Year 2/First Term/Digital Logic Design/Labs/Decoder
+valu
+Z0 !s110 1682795839
+!i10b 1
+!s100 J=QJoRjlTKi3VO>Gz0B6H2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ij=<Z`ldnC`bK@M1dCDM`G2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/Engineering/External learning/Courses/IC Design/Chipions/Assignments/Assignment 2
+w1682795812
+8D:\Engineering\External learning\Courses\IC Design\Chipions\Assignments\Assignment 2\alu.v
+FD:\Engineering\External learning\Courses\IC Design\Chipions\Assignments\Assignment 2\alu.v
+!i122 21
+L0 1 63
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1682795838.000000
+!s107 D:\Engineering\External learning\Courses\IC Design\Chipions\Assignments\Assignment 2\alu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:\Engineering\External learning\Courses\IC Design\Chipions\Assignments\Assignment 2\alu.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vFA_1
+R0
+!i10b 1
+!s100 ^QFQ7>>^YkcSSgz>bZ[Yn3
+R1
+Ie^=BWYRG^94P517bobl`S3
+R2
+R3
+w1682775269
+8D:/Engineering/External learning/Courses/IC Design/Chipions/Assignments/Assignment 2/FA_1.v
+FD:/Engineering/External learning/Courses/IC Design/Chipions/Assignments/Assignment 2/FA_1.v
+!i122 22
+L0 1 10
+R4
+r1
+!s85 0
+31
+Z7 !s108 1682795839.000000
+!s107 D:/Engineering/External learning/Courses/IC Design/Chipions/Assignments/Assignment 2/FA_1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Engineering/External learning/Courses/IC Design/Chipions/Assignments/Assignment 2/FA_1.v|
+!i113 1
+R5
+R6
+n@f@a_1
+vfull_add_tb
+R0
+!i10b 1
+!s100 D5RiF;:aZP`WdWZnmE@782
+R1
+Ii6hfaTf:53;1ZGNzKggb`2
+R2
+R3
+w1682775303
+8D:/Engineering/External learning/Courses/IC Design/Chipions/Assignments/Assignment 2/FA_1_tb.v
+FD:/Engineering/External learning/Courses/IC Design/Chipions/Assignments/Assignment 2/FA_1_tb.v
+!i122 23
+L0 1 20
+R4
+r1
+!s85 0
+31
+R7
+!s107 D:/Engineering/External learning/Courses/IC Design/Chipions/Assignments/Assignment 2/FA_1_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Engineering/External learning/Courses/IC Design/Chipions/Assignments/Assignment 2/FA_1_tb.v|
+!i113 1
+R5
+R6
+vfulladder
+R0
+!i10b 1
+!s100 FU4@kbnhhgzMWiX@7m`<V0
+R1
+Ijb?27HMf5`B8;ehUn3>Sl3
+R2
+R3
+w1682777191
+8D:/Engineering/External learning/Courses/IC Design/Chipions/Assignments/Assignment 2/fulladder.v
+FD:/Engineering/External learning/Courses/IC Design/Chipions/Assignments/Assignment 2/fulladder.v
+!i122 24
+L0 1 19
+R4
+r1
+!s85 0
+31
+R7
+!s107 D:/Engineering/External learning/Courses/IC Design/Chipions/Assignments/Assignment 2/fulladder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Engineering/External learning/Courses/IC Design/Chipions/Assignments/Assignment 2/fulladder.v|
+!i113 1
+R5
+R6
+vrippleadder_b
+R0
+!i10b 1
+!s100 4mMKJWe8aM;Ho1MFO6NH<2
+R1
+ITXeoC[dXiXQh:ek;[mEdh0
+R2
+R3
+w1682777093
+8D:/Engineering/External learning/Courses/IC Design/Chipions/Assignments/Assignment 2/fulladder_tb.v
+FD:/Engineering/External learning/Courses/IC Design/Chipions/Assignments/Assignment 2/fulladder_tb.v
+!i122 25
+L0 1 25
+R4
+r1
+!s85 0
+31
+R7
+!s107 D:/Engineering/External learning/Courses/IC Design/Chipions/Assignments/Assignment 2/fulladder_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Engineering/External learning/Courses/IC Design/Chipions/Assignments/Assignment 2/fulladder_tb.v|
+!i113 1
+R5
+R6

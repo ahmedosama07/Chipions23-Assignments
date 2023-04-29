@@ -36,7 +36,7 @@ begin
     out = a ^ b;
    end
    3'b101 : begin 
-    // out = a > b;
+    out = a > b;
     if (a > b) begin
         cflag = 1;
     end
@@ -48,8 +48,6 @@ begin
    3'b111 : begin out = b << 1; end
    default:out = 8'bXXXXXXXX;
  endcase
-
-
 
  case (out)
     8'b00000000 : zflag = 1; 
