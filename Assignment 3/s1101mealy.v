@@ -38,7 +38,7 @@ always @(posedge clk, posedge rst) begin
             state_reg <= S3;
           end
       S3: if (din) begin
-            state_reg <= S0;
+            state_reg <= S1;
             dout <= 1'b1;
           end else begin
             state_reg <= S0;
