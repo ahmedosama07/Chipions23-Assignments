@@ -1,4 +1,4 @@
-module mealy_fsm (
+module s1101mealy (
   input clk, // clock signal
   input rst, // reset signal
   input din, // input signal
@@ -29,19 +29,19 @@ always @(posedge clk, posedge rst) begin
             state_reg <= S2;
             dout <= 1'b0;
           end else begin
-            state_reg <= S1;
+            state_reg <= S0;
           end
       S2: if (din) begin
-            state_reg <= S3;
+            state_reg <= S2;
             dout <= 1'b0;
           end else begin
-            state_reg <= S1;
+            state_reg <= S3;
           end
       S3: if (din) begin
-            state_reg <= S1;
+            state_reg <= S0;
             dout <= 1'b1;
           end else begin
-            state_reg <= S2;
+            state_reg <= S0;
           end
       default: begin
             state_reg <= S0;

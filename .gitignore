@@ -1,3 +1,13 @@
 *.docx
 *.pdf
 *.zip
+*.wlf
+*.qpg
+*.qtl
+*.qdp
+*.qdb
+*.mti
+*.mpf
+*transcript
+*_vmake
+*_info
