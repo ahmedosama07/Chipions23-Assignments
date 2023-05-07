@@ -10,7 +10,7 @@ parameter S0 = 3'b000; // Initial state
 parameter S1 = 3'b001; // Found 1
 parameter S2 = 3'b010; // Found 11
 parameter S3 = 3'b011; // Found 110
-parameter S4 = 3'b100; // Found 110
+parameter S4 = 3'b100; // Found 1101
 
 // Define the state register
 reg [2:0] state;
@@ -28,7 +28,7 @@ always @(posedge clk, posedge rst) begin
           else state <= S3;
       S3: if (din) state <= S4;
           else state <= S0;
-      S4: if (din) state <= S1;
+      S4: if (din) state <= S2;
           else state <= S0;
       default: state <= S0;
     endcase
