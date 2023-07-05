@@ -15,7 +15,8 @@ for i in ${!array[@]}; do
   VERILOG_FILES+="${array[$i]}"
   echo "element $i is ${VERILOG_FILES[$i]}"
 done
-
+echo "${array}"
+echo "${VERILOG_FILES}"
 
 # Compile the Verilog files into an executable
 iverilog -o $PROJECT_NAME $VERILOG_FILES
