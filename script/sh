@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Define the name of the project
+PROJECT_NAME="verilog_test_case"
+
+# Define the list of Verilog files to be included in the project
+assignments=()
+
+while IFS=  read -r -d $'\0'; do
+    assignments+=("$REPLY")
+done < <(find . -name "Assignment*" -print0)
+
+for i in ${!assignments[@]}; do
+  echo "element $i is ${assignments[$i]}"
+  
+  chmod +x "${assignments[$i]}"
+done
+
+for i in ${!assignments[@]}; do
+    # VERILOG_FILES="*.v"
+    cd "${assignments[$i]}"
+    pwd
+
+    array=()
+    while IFS=  read -r -d $'\0'; do
+        array+=("$REPLY")
+    done < <(find . -name "*.v" -print0)
+
+    for j in ${!array[@]}; do
+        echo "element $j is ${array[$j]}"
+    done
+    
+    # Compile the Verilog files into an executable
+    iverilog '-Wall' -o $PROJECT_NAME *.v
+    
+    # Run the simulation for scripts
+    vvp $PROJECT_NAME
+    
+    cd ..
+done
+# Print a message indicating that the script has finished running
+echo "Success! Script has finished running."
