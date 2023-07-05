@@ -22,7 +22,7 @@ jobs:
         array=()
         while IFS=  read -r -d $'\0'; do
             array+=("$REPLY")
-        done < <(find . -name "*tb.v" -print0)
+        done < <(find . -name "*.v" -print0)
         len=${#array[*]}
         echo "found : ${len}"
         
