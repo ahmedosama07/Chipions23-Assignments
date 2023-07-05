@@ -43,7 +43,7 @@ for i in ${!assignments[@]}; do
     echo "$VERILOG_FILES"
     
     # Compile the Verilog files into an executable
-    iverilog '-Wall' -o $PROJECT_NAME "tb.v decoder3to8.v"
+    iverilog '-Wall' -o $PROJECT_NAME "tb.v" "decoder3to8.v"
     
     # Run the simulation for scripts
     vvp $PROJECT_NAME
