@@ -31,6 +31,7 @@ for i in ${!assignments[@]}; do
           
         chmod +x "${array[$j]}"
         VERILOG_FILES+="${array[$j]}"
+        VERILOG_FILES+=" "
 
         #echo "${array}"
         echo "${VERILOG_FILES}"
