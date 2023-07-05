@@ -25,6 +25,11 @@ jobs:
         done < <(find . -name "*tb.v" -print0)
         len=${#array[*]}
         echo "found : ${len}"
+        
+        for i in ${!array[@]}; do
+          echo "element $i is ${array[$i]}"
+        done
+        
         # chmod +x *tb.v
         
     - run: |
