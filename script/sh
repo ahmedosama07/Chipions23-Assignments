@@ -18,7 +18,7 @@ for i in ${!array[@]}; do
     echo "${VERILOG_FILES}"
     
     # Compile the Verilog files into an executable
-    iverilog -o $PROJECT_NAME $VERILOG_FILES
+    iverilog -o $PROJECT_NAME "$VERILOG_FILES"
     
     # Run the simulation for scripts
     vvp $PROJECT_NAME
