@@ -4,17 +4,13 @@
 PROJECT_NAME="verilog_test_case"
 
 # Define the list of Verilog files to be included in the project
-array=()
+VERILOG_FILES=()
 while IFS=  read -r -d $'\0'; do
-    array+=("$REPLY")
+    VERILOG_FILES+=("$REPLY")
 done < <(find . -name "*tb.v" -print0)
 
-VERILOG_FILES=()
-
-for i in ${!array[@]}; do
-  echo "element $i is ${array[$i]}"
-  
-  VERILOG_FILES += "${array[$i]}"
+for i in ${!VERILOG_FILES[@]}; do
+  echo "element $i is ${VERILOG_FILES[$i]}"
 done
 
 
