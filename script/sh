@@ -5,12 +5,20 @@ PROJECT_NAME="verilog_test_case"
 
 # Define the list of Verilog files to be included in the project
 VERILOG_FILES=()
-array=()
-while IFS=  read -r -d $'\0'; do
-    array+=("$REPLY")
-done < <(find . -name "*tb.v" -print0)
+assignments=()
 
-for i in ${!array[@]}; do
+while IFS=  read -r -d $'\0'; do
+    assignments+=("$REPLY")
+done < <(find . -name "Assignment*" -print0)
+
+for i in ${!assignments[@]}; do
+    cd "${assignments[$i]}"
+
+    array=()
+    while IFS=  read -r -d $'\0'; do
+        array+=("$REPLY")
+    done < <(find . -name "*tb.v" -print0)
+
     echo "element $i is ${array[$i]}"
     VERILOG_FILES="${array[$i]}"
 
@@ -22,6 +30,7 @@ for i in ${!array[@]}; do
     
     # Run the simulation for scripts
     vvp $PROJECT_NAME
+    cd ..
 done
 # Print a message indicating that the script has finished running
 echo "Success! Script has finished running."
