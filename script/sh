@@ -4,7 +4,6 @@
 PROJECT_NAME="verilog_test_case"
 
 # Define the list of Verilog files to be included in the project
-VERILOG_FILES=()
 assignments=()
 
 while IFS=  read -r -d $'\0'; do
@@ -18,6 +17,7 @@ for i in ${!assignments[@]}; do
 done
 
 for i in ${!assignments[@]}; do
+    VERILOG_FILES=()
     cd "${assignments[$i]}"
     pwd
 
@@ -35,8 +35,6 @@ for i in ${!assignments[@]}; do
 
         #echo "${array}"
         echo "${VERILOG_FILES}"
-        
-        
     done
 
     echo "$VERILOG_FILES"
