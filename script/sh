@@ -28,6 +28,8 @@ for i in ${!assignments[@]}; do
 
     for j in ${!array[@]}; do
         echo "element $j is ${array[$j]}"
+        export New_string=$(echo "$array[$j]" | tr '\\' '/')
+        array[$j]="$New_string"
           
         chmod +x "${array[$j]}"
         VERILOG_FILES+="${array[$j]}"
