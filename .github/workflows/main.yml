@@ -1,33 +1,26 @@
-name: Tests
+name: Verilog Build and Analysis
 
 on: [push, pull_request]
 
 jobs:
-  build:
-    name: Python ${{ matrix.python-version }} (${{ matrix.group }}/10)
-    runs-on: ubuntu-22.04
-    
-    strategy:
-      matrix:
-        python-version: ["3.10"]
-        group: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  build-and-analyze:
+    runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Verilog Compiler
+      uses: jge162/verilog_compiler@1.0.0
 
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python-version }}
+    - run: |
+        echo "Install required dependencies"
+        sudo apt-get update
+        sudo apt-get install iverilog
+        sudo apt-get install verilator
 
-    - name: Install Icarus Verilog
-      run: |
-        sudo apt install -y --no-install-recommends iverilog
-
-    - name: Install Python dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install tox tox-gh-actions
-
-    - name: Test with tox
-      run: tox -- -n auto --verbose --splits 10 --group ${{ matrix.group }}
+    - run: |
+        echo "Set executable permission on script file"
+        chmod +x script/sh
+        chmod +x ./verilog_test_case.v
+        
+    - run: |
+        echo "Run, Build Application using script"
+        ./script/sh
