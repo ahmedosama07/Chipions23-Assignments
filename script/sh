@@ -12,6 +12,12 @@ while IFS=  read -r -d $'\0'; do
 done < <(find . -name "Assignment*" -print0)
 
 for i in ${!assignments[@]}; do
+  echo "element $i is ${assignments[$i]}"
+  
+  chmod +x "${assignments[$i]}"
+done
+
+for i in ${!assignments[@]}; do
     cd "${assignments[$i]}"
     pwd
 
