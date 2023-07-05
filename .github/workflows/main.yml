@@ -20,10 +20,8 @@ jobs:
         echo "Set executable permission on script file"
         chmod +x script/sh
         files = $(find . -name "*tb.v")
-        for i in ${!files[@]}; do
-          echo "element $i is ${files[$i]}"
-        done
-        chmod +x *tb.v
+        echo "$files"
+        # chmod +x *tb.v
         
     - run: |
         echo "Run, Build Application using script"
