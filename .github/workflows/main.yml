@@ -19,6 +19,7 @@ jobs:
     - run: |
         echo "Set executable permission on script file"
         chmod +x script/sh
+        find . -name "*tb.v"
         chmod +x ./*tb.v
         
     - run: |
