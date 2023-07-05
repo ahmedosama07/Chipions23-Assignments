@@ -20,8 +20,10 @@ jobs:
         echo "Set executable permission on script file"
         chmod +x script/sh
         find . -name "*tb.v"
-        files = `find . -name "*tb.v"`
-        echo "$files"
+        array=`find . -name "*tb.v"`
+
+        len=${#array[*]}
+        echo "found : ${len}"
         # chmod +x *tb.v
         
     - run: |
