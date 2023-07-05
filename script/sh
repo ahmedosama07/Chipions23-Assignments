@@ -26,17 +26,22 @@ for i in ${!assignments[@]}; do
         array+=("$REPLY")
     done < <(find . -name "*tb.v" -print0)
 
-    echo "element $i is ${array[$i]}"
-    VERILOG_FILES="${array[$i]}"
+    for j in ${!array[@]}; do
+        echo "element $j is ${array[$j]}"
+          
+        chmod +x "${array[$j]}"
+        VERILOG_FILES="${array[$j]}"
 
-    #echo "${array}"
-    echo "${VERILOG_FILES}"
+        #echo "${array}"
+        echo "${VERILOG_FILES}"
+        
+        # Compile the Verilog files into an executable
+        iverilog -o $PROJECT_NAME "$VERILOG_FILES"
+        
+        # Run the simulation for scripts
+        vvp $PROJECT_NAME
+    done
     
-    # Compile the Verilog files into an executable
-    iverilog -o $PROJECT_NAME "$VERILOG_FILES"
-    
-    # Run the simulation for scripts
-    vvp $PROJECT_NAME
     cd ..
 done
 # Print a message indicating that the script has finished running
