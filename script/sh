@@ -13,6 +13,7 @@ done < <(find . -name "Assignment*" -print0)
 
 for i in ${!assignments[@]}; do
     cd "${assignments[$i]}"
+    pwd
 
     array=()
     while IFS=  read -r -d $'\0'; do
